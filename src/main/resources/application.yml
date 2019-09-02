@@ -1,0 +1,15 @@
+server:
+  #d端口号
+  port: 9102
+#dubbo配置
+dubbo:
+  application:
+    #应用名称
+    name: dubbo-debug
+    qos-port: 33333
+    qos-enable: true
+    qos-accept-foreign-ip: false
+  registry:
+    #注册中心地址
+    address: zookeeper://127.0.0.1:2181
+
