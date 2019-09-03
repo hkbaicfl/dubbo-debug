@@ -22,6 +22,11 @@ public class DubboDebugParam {
     private String method;
 
     /**
+     * 版本号
+     */
+    private String version;
+
+    /**
      * 参数类型
      */
     private String[] types;

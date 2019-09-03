@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 public class DubboDebugServiceImpl implements DubboDebugService {
 
     /**
-     * 应用mingc
+     * 应用名称
      */
     @Value("${dubbo.application.name}")
     private String appName;
@@ -43,7 +43,6 @@ public class DubboDebugServiceImpl implements DubboDebugService {
         if (param.getTypes() == null) {
             param.setTypes(new String[] {});
         }
-
         if (param.getArgs() == null) {
             param.setArgs(new Object[] {});
         }
@@ -51,7 +50,11 @@ public class DubboDebugServiceImpl implements DubboDebugService {
         ReferenceConfig<GenericService> reference = new ReferenceConfig<>();
         reference.setGeneric(true);
         reference.setApplication(new ApplicationConfig(appName));
+        String version = param.getVersion();
         reference.setInterface(param.getService());
+        if (StringUtils.isNotEmpty(version)) {
+            reference.setVersion(version);
+        }
 
         RegistryConfig registry = new RegistryConfig();
         registry.setAddress(registryAddress);
@@ -60,6 +63,10 @@ public class DubboDebugServiceImpl implements DubboDebugService {
         // 获取缓存中的实例
         ReferenceConfigCache cache = ReferenceConfigCache.getCache();
         GenericService genericService = cache.get(reference);
+        if (genericService == null) {
+            cache.destroy(reference);
+            throw new IllegalStateException("服务不可用");
+        }
         return genericService.$invoke(param.getMethod(), param.getTypes(), param.getArgs());
     }
 

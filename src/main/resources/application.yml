@@ -1,15 +1,12 @@
 server:
-  #�˿ں�
+  #端口号（冲突时修改）
   port: 9102
-#dubbo����
 dubbo:
   application:
-    #Ӧ������
+    #dubbo应用名称
     name: dubbo-debug
+    #dubbo qos端口号（一般情况下不用修改）
     qos-port: 33333
-    qos-enable: true
-    qos-accept-foreign-ip: false
   registry:
-    #ע�����ĵ�ַ
+    #dubbo注册中心地址（更换为实际的地址）
     address: zookeeper://127.0.0.1:2181
-
