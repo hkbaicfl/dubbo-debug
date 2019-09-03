@@ -8,9 +8,9 @@
 按需修改application.yml配置，端口号有冲突时修改，注册中心地址修改为实际的地址
 ![](images/application.png)
 #### 2.切换到项目中
-2.1 运行命令mvn clean package进行打包
-2.2 打包完成之后再运行命令mvn spring-boot:run启动项目
-2.3 http请求格式（参考例子）
+##### 2.1 运行命令mvn clean package进行打包
+##### 2.2 打包完成之后再运行命令mvn spring-boot:run启动项目
+##### 2.3 http请求格式（参考例子）
 ```java
 {
     "service": "com.example.api.UserService",
