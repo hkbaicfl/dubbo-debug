@@ -28,3 +28,4 @@
 ### 三、使用（安装包模式）
 #### 默认请求地址为：127.0.0.1:9102/dubbo/debug
 #### 下载dubbo-debug-setup.exe并安装后在文件夹里点击dubbo-debug.exe运行即可
+####  [下载链接](https://github.com/hkbaicfl/dubbo-debug/releases)
