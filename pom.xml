@@ -22,7 +22,7 @@
         <curator.version>2.12.0</curator.version>
         <curator-recipes.version>2.8.0</curator-recipes.version>
         <commons-lang3.version>3.8.1</commons-lang3.version>
-        <guava.version>28.0-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <skipTests>true</skipTests>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
