@@ -15,7 +15,7 @@
 
     <properties>
         <zkclient.version>0.11</zkclient.version>
-        <spring-boot.version>2.1.7.RELEASE</spring-boot.version>
+        <spring-boot.version>2.5.12</spring-boot.version>
         <dubbo.version>2.7.3</dubbo.version>
         <zookeeper.version>3.4.14</zookeeper.version>
         <sl4j.version>1.7.28</sl4j.version>
